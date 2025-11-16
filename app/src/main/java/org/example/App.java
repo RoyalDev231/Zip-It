@@ -3,12 +3,18 @@
  */
 package org.example;
 
+import java.util.List;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        List<Integer> nums1 = List.of(1, 3, 5, 7);
+        List<Integer> nums2 = List.of(2, 4, 6, 8);
+        System.out.println(ListUtils.zip(nums1, nums2));
+
+        List<String> colors1 = List.of("Red", "Green", "Blue");
+        List<String> colors2 = List.of("White", "Black", "Orange", "Pink", "Fuschia");
+        System.out.println(ListUtils.zip(colors1, colors2));
     }
 }
+
